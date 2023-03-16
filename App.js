@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 import ButtonCalc from './src/components/ButtonCalc';
+import Display from './src/components/Display';
 
 
 export default function App() {
+  const [displayValue,setDisplayValue] = useState('0')
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />
+      <Display value={displayValue}/>
       <View style={styles.buttons}>
         <ButtonCalc label='AC'/>
         <ButtonCalc label='/'/>
