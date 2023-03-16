@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "calculadora-rn",
-    "slug": "calculadora-rn",
+    "slug": "calculadora",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "63e8fc79-e115-409b-b4f9-45aaf1c995b7"
+      }
+    },
+    "owner": "user_thiagom"
   }
 }

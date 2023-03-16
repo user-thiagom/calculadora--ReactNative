@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import ButtonCalc from './src/components/ButtonCalc';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar />
+      <View style={styles.buttons}>
+        <ButtonCalc label='AC'/>
+        <ButtonCalc label='/'/>
+        <ButtonCalc label='7'/>
+        <ButtonCalc label='8'/>
+        <ButtonCalc label='9'/>
+        <ButtonCalc label='*'/>
+        <ButtonCalc label='4'/>
+        <ButtonCalc label='5'/>
+        <ButtonCalc label='6'/>
+        <ButtonCalc label='-'/>
+        <ButtonCalc label='1'/>
+        <ButtonCalc label='2'/>
+        <ButtonCalc label='3'/>
+        <ButtonCalc label='+'/>
+        <ButtonCalc label='0'/>
+        <ButtonCalc label='.'/>
+        <ButtonCalc label='='/>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  buttons:{
+    flexDirection:'row',
+    flexWrap:'wrap'
+  }
 });
